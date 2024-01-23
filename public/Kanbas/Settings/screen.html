@@ -1,0 +1,118 @@
+<html>
+    <head></head>
+    <body>
+        <table width="100%">
+        <tr>
+            <td valign="top">
+                <ul>
+                    <li><a href="/Kanbas/Account/Navigation/index.html">
+                       Account</a></li>
+                    <li>
+                     <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+                    </li>
+                    <li>
+                     <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+                    </li>
+                    <li>
+                     <a href="/Kanbas/Calendar/index.html">Calendar</a></li>
+                    <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
+                   </ul>
+            </td>
+            <td valign="top">
+                <ul>
+                    <li>
+                      <a href="/Kanbas/Courses/Home/screen.html">
+                        Home</a></li>
+                    <li><a href="/Kanbas/Courses/Modules/screen.html">
+                        Modules</a></li>
+                    <li><a href="/Kanbas/Courses/Piazza/index.html">
+                        Piazza</a></li>
+                    <li><a href="/Kanbas/Courses/Grades/screen.html">
+                        Grades</a></li>
+                    <li><a href="/Kanbas/Courses/Assignments/screen.html">
+                        Assignments</a></li>
+                    <li><a href="/Kanbas/Settings/screen.html">
+                        Settings</a></li>
+                  </ul>    
+            </td>
+            <td valigh="right", width="100%">
+                <table>
+                    <tr>
+                        <td><a href="/Kanbas/Settings/index.html">Courses Details</a></td>
+                        <td><a href="/Kanbas/Settings/Course Navigation/screen.html">Navigation</a></td>
+                    </tr>
+                </table>
+                <h2 style="font-weight: normal;">Course Details</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <h4>Image:</h4>
+                        </td>
+                        <td valign="top">
+                            <button>Choose Image</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h4>Name:</h4></td>
+                        <td valign="top">CS5610 Web Development SEC 02 Spring 2024</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Course Code:</h4></td>
+                        <td valign="top">CS5610</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Blueprint Course:</h4></td>
+                        <td valign="top">No</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Time Zone:</h4></td>
+                        <td valign="top">
+                            <Select>
+                                <option>Eastern Time(US & Canada)</option>
+                        </Select></td>
+                    </tr>
+                    <tr>
+                        <td><h4>SIS ID:</h4></td>
+                        <td valign="top">CS5610</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Participation:</h4></td>
+                        <td valign="top">
+                            <select>
+                                <option>Term</option>
+                            </select><br/>
+                            Course participation is limited to term start and end dates.
+                            <h4>Start</h4>
+                            <input type="date"/><br />
+                            <h4>End</h4>
+                            <input type="date"/><br />
+                            <label> <input type="checkbox" name="restrict-student" />Restrict students from viewing course before term start date</label><br />
+                            <label> <input type="checkbox" name="restrict-student" />Restrict student from viewing course after term end date</label><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h4>Default due time:</h4></td>
+                        <td>
+                            <select>
+                                <option>Account default(11:59pm)</option>
+                            </select><br/>
+                            This influences the user interface for setting due dates.<br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h4>Language:</h4></td>
+                        <td>
+                            <select>
+                                <option>Not set(user-configurable, defaults to English)</option>
+                            </select><br/>
+                        </td>
+                        <td valign="right"><form action="/Kanbas/Settings/screen.html">
+                            <button valign="right">Update Course Details</button></form>
+                        </td>
+                    </tr>
+                </table>  
+            </td>
+        </tr>
+    </table>
+    </body>
+</html>
