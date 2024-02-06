@@ -1,62 +1,74 @@
 <html>
     <head></head>
     <body>
-        <select>
-            <option>Speed Grader</option>
-        </select>
-        <hr />
-        <h2>Assignment Name</h2>
-        <input value="A1 - HTML" />
-        <br />
-        <br />
-        <br />
-        <textarea>Assignment Description. In this assignment, we are learning about HTML.</textarea>
-        <br />
-        <br />
-        <label for="points">Points</label><br />
-        <input id="points" value="100" />
-        <br />
-        <br />
-        <label>Assignment Group</label><br />
-        <select>
-            <option>ASSIGNMENT</option>
-            <option>QUIZ</option>
-            <option>EXAM</option>
-            <option>PROJECT</option>
-        </select>
-        <br />
-        <br />
-        <label>Display Grade as</label><br />
-        <select>
-            <option>Percentage</option>
-            <option>Points</option>
-        </select>
-        <br />
-        <br />
-        <label>Submission type</label><br />
-        <select>
-            <option>Online</option>
-            <option>In-person</option>
-        </select>
-        <br />
-        <br />
-        <label>Online Entry Options</label><br />
-        <label> <input type="checkbox" name="online-entry-options" />Text Entry</label><br />
-        <label> <input type="checkbox" name="online-entry-options" />Website URL</label><br />
-        <label> <input type="checkbox" name="online-entry-options" />Media Recordings</label><br />
-        <label> <input type="checkbox" name="online-entry-options" />Student Annotation</label><br />
-        <label> <input type="checkbox" name="online-entry-options" />File Uploads</label><br />
-        <br />
-        <br />
-        <label>Due Date</label><br />
-        <input type="date" value="2020-09-01" /><br />
-        <br />
-        <br />
-        <label>Available From</label><br />
-        <input type="date" value="2020-09-01" /><br />
-        <br />
-        <br />
-        <button>Cancel</button>
-        <button>Save</button>
+        <table width = "100%">
+            <tbody>
+                <tr>
+                    <td><input placeholder = "Search for Assignments"></td>
+                    <td><button>+Group</button>
+                        <button>+ Assignment</button>
+                        <select>
+                            <option>Edit Assignment Dates</option>
+                            <option>Assignment Group Weights</option>
+                            <option>Gradescope 1.3</option>
+                        </select>
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>Assignments <select>
+                <option>Edit</option>
+                <option>Assignment Group Weights</option>
+                <option>Gradescope 1.3</option>
+            </select></li>
+            <ul>
+                <li>
+                    <a href = "/Kanbas/Courses/Assignments/Editor/screen.html">A1</a><br />
+                    <a href = "./modules.html">Multiple modules</a> |
+                    Due date: 2020-09-01 23:59:59 | 100 pts
+                </li>
+                <li>
+                    <a href = "/Kanbas/Courses/Assignments/Editor/screen.html">A2</a><br />
+                    <a href = "./modules.html">Multiple modules</a> |
+                    Due date: 2020-10-01 23:59:59 | 100 pts
+                </li>
+                <li>
+                    <a href = "/Kanbas/Courses/Assignments/Editor/screen.html">A3</a><br />
+                    <a href = "./modules.html">Multiple modules</a> |
+                    Due date: 2020-11-01 23:59:59 | 100 pts
+                </li>
+                <li>
+                    <a href = "./edit.html">A4</a><br />
+                    <a href = "./modules.html">Multiple modules</a> |
+                    Due date: 2020-12-01 23:59:59 | 100 pts
+                </li>
+            </ul>
+            <li>Quizzes <select>
+                <option>Edit</option>
+                <option>Assignment Group Weights</option>
+                <option>Gradescope 1.3</option>
+            </select></li>
+            <ul>
+                <li><a href = "/Kanbas/Courses/Quizzes.screen.html">Q1</a></li>
+                <li><a href = "/Kanbas/Courses/Quizzes.screen.html">Q2</a></li>
+                <li><a href = "/Kanbas/Courses/Quizzes.screen.html">Q3</a></li>
+            </ul>
+            <li>Exams <select>
+                <option>Edit</option>
+                <option>Assignment Group Weights</option>
+                <option>Gradescope 1.3</option>
+            </select></li>
+            <ul>
+                <li>X1</li>
+                <li>X2</li>
+            </ul>
+            <li>Projects <select>
+                <option>Edit</option>
+                <option>Assignment Group Weights</option>
+                <option>Gradescope 1.3</option>
+            </select></li>
+        </ul>
     </body>
 </html>
