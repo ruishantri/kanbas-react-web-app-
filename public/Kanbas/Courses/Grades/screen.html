@@ -85,30 +85,28 @@
                     <div class="m-3 p-3">
                     <nav aria-label="breadcrumb">
                         <ul class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="#" class="text-danger">CS5610.126</a></li>
+                          <li class="breadcrumb-item"><a href="#" class="text-danger">CS5610.11744</a></li>
                           <li class="breadcrumb-item active" aria-current="page">Grades</li>
                         </ul>
                       </nav>
-                    <select id="select-grade">
-                    <option selected value="gradebook">Gradebook</option>
-                    <option value="one">One Grade</option>
                     </select>
-                <button type="button"><i class="fa-solid fa-file-import"></i>Import</button> 
-                <select id="select-export" ><i class="fas fa-file-export"></i>
-                    <option selected value="Export">Export</option>
-                    <option value="Import">Import</option>
-                    </select>
-                <button type="button"id="action-button"><i class="fas fa-file-export"></i>Configure</button> 
-        
-                <h2>Student Names</h2>
-        
-                <input id="search-students" placeholder="Search Students"/><br/>
-        
-                <h2>Assignment Names</h2>
-        
-                <input id="assignment-names" placeholder="Search Assignments"/><br/>
-                <br/>
-                <button type="button">Apply Filters</button> <br/>
+                    <div class="d-flex justify-content-end mb-2" valign = "right">
+                        <button class="btn btn-outline-secondary mr-2">
+                            <i class="fa-solid fa-file-import"></i> Import
+                        </button>
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="exportDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-file-export"></i> Export
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="exportDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <!-- Other dropdown items -->
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-secondary">
+                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                        </button>
+                    </div>
         
                 <table border="1" width="100%">
                     <thead>
@@ -119,156 +117,83 @@
                         <th>A3 CSS Out of 100</th>
                         <th>A4 BOOTSTRAP Out of 100</th>
                         <th>A5 JAVASCRIPT Out of 100</th>
-                        <th>A6 REACT Out of 100</th>
-                        <th>A7 REDUX Out of 100</th>
-                        <th>A8 NODE Out of 100</th>
-                        <th>A9 MONGO Out of 100</th>
-                    </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Alice Wonderland</td>
-                        <td>98</td>
-                        <td>89</td>
-                        <td>87</td>
-                        <td>90</td>
-                        <td>89</td>
-                        <td>94</td>
-                        <td>88</td>
-                        <td>87</td>
-                        <td>100</td>
+                        <td>Doxa Asibey</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>89.59%</td>
+                        <td>98.65%</td>
                     </tr>
                     <tr>
-                        <td>Princess Leia</td>
-                        <td>98</td>
-                        <td>89</td>
-                        <td>80</td>
-                        <td>87</td>
-                        <td>86</td>
-                        <td>100</td>
-                        <td><input id="grade" placeholder="85"/></td>
-                        <td>87</td>
-                        <td>100</td>
+                        <td>Thuy Tien Bui</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td><input id="grade" placeholder="91.5%"/></td>
+                        <td>100%</td>
+                    <tr>
+                        <td>Yetong Chen</td>
+                        <td>100%</td>
+                        <td><input id="grade" placeholder="97%"/></td>
+                        <td>100%</td>
+                        <td>100%</td>
                     </tr>
                     <tr>
-                        <td>Luke Skywalker</td>
-                        <td><input id="grade" placeholder="99"/></td>
-                        <td>88</td>
-                        <td>97</td>
-                        <td>82</td>
-                        <td>96</td>
-                        <td>93</td>
-                        <td>95</td>
-                        <td>100</td>
-                        <td>93</td>
+                        <td>Zhenyu Chen</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td><input id="grade" placeholder="98.64%"/></td>
+                        <td>100%</td>
                     </tr>
                     <tr>
-                        <td>Han Solo</td>
-                        <td>83</td>
-                        <td>99</td>
-                        <td>94</td>
-                        <td>98</td>
-                        <td>86</td>
-                        <td>85</td>
-                        <td><input id="grade" placeholder="86"/></td>
-                        <td>80</td>
-                        <td>84</td>
+                        <td>Yung-Shin Chien</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
                     </tr>
                     <tr>
-                        <td>Lando Calresian</td>
-                        <td>83</td>
-                        <td><input id="grade" placeholder="92"/></td>
-                        <td>80</td>
-                        <td>80</td>
-                        <td>92</td>
-                        <td>92</td>
-                        <td>94</td>
-                        <td>87</td>
-                        <td>95</td>
+                        <td>Basil Coughlan</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td><input id="grade" placeholder="99.32%"/></td>
                     </tr>
                     <tr>
-                        <td>Boba Fet</td>
-                        <td>85</td>
-                        <td>89</td>
-                        <td>94</td>
-                        <td>83</td>
-                        <td>83</td>
-                        <td>84</td>
-                        <td>91</td>
-                        <td>87</td>
-                        <td>96</td>
+                        <td>Rachel Dao</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
                     </tr>
                     <tr>
-                        <td>Darth Vader</td>
-                        <td>81</td>
-                        <td>81</td>
-                        <td><input id="grade" placeholder="96"/></td>
-                        <td>80</td>
-                        <td>89</td>
-                        <td>88</td>
-                        <td>82</td>
-                        <td>80</td>
-                        <td>82</td>
+                        <td>Lana Do</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
                     </tr>
                     <tr>
-                        <td>Obi-Wan Kenobi</td>
-                        <td><input id="grade" placeholder="85"/></td>
-                        <td>99</td>
-                        <td>87</td>
-                        <td>82</td>
-                        <td>88</td>
-                        <td>83</td>
-                        <td>88</td>
-                        <td>92</td>
-                        <td>80</td>
+                        <td>Kartikey Dwivedi</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
                     </tr>
                     <tr>
-                        <td>R2-D2</td>
-                        <td>81</td>
-                        <td><input id="grade" placeholder="92"/></td>
-                        <td><input id="grade" placeholder="82"/></td>
-                        <td>86</td>
-                        <td>83</td>
-                        <td>83</td>
-                        <td><input id="grade" placeholder="84"/></td>
-                        <td>98</td>
-                        <td>96</td>
+                        <td>Jiarong Feng</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td><input id="grade" placeholder="94.24%"/></td>
+                        <td>100%</td>
                     </tr>
                     <tr>
-                        <td>C-3PO</td>
-                        <td>94</td>
-                        <td>98</td>
-                        <td>83</td>
-                        <td>83</td>
-                        <td>100</td>
-                        <td>96</td>
-                        <td>96</td>
-                        <td>85</td>
-                        <td>87</td>
-                    </tr>
-                    <tr>
-                        <td>Yoda</td>
-                        <td>80</td>
-                        <td>89</td>
-                        <td>99</td>
-                        <td>89</td>
-                        <td>96</td>
-                        <td>85</td>
-                        <td>96</td>
-                        <td>92</td>
-                        <td>85</td>
-                    </tr>
-                    <tr>
-                        <td>Admiral Ackbar</td>
-                        <td>82</td>
-                        <td>88</td>
-                        <td>95</td>
-                        <td>100</td>
-                        <td><input id="grade" placeholder="93"/></td>
-                        <td>98</td>
-                        <td>85</td>
-                        <td>87</td>
-                        <td>99</td>
+                        <td>Saurahb Sunil Gade</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
                     </tr>
                     </tbody>
                  </table>
