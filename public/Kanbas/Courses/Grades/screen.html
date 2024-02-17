@@ -90,6 +90,24 @@
                         </ul>
                       </nav>
                     </select>
+                    <div class="container-fluid">
+                        <div class="row my-3">
+                            <div class="col-md-6">
+                                <div class="dropdown">
+                                    <input type="text" class="form-control dropdown-toggle" id="studentSearchDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Search Students">
+                                    <div class="dropdown-menu" aria-labelledby="studentSearchDropdown">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="dropdown">
+                                    <input type="text" class="form-control dropdown-toggle" id="assignmentSearchDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Search Assignments">
+                                    <div class="dropdown-menu" aria-labelledby="assignmentSearchDropdown">
+                                        <!-- Dynamic search items will be appended here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     <div class="d-flex justify-content-end mb-2" valign = "right">
                         <button class="btn btn-outline-secondary mr-2">
                             <i class="fa-solid fa-file-import"></i> Import
@@ -100,14 +118,13 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="exportDropdown">
                                 <a class="dropdown-item" href="#">Action</a>
-                                <!-- Other dropdown items -->
                             </div>
                         </div>
                         <button class="btn btn-outline-secondary">
                             <i class="fa-solid fa-pen-to-square"></i> Edit
                         </button>
                     </div>
-        
+                <div class="grades-table-container">
                 <table border="1" width="100%">
                     <thead>
                     <tr>
@@ -115,9 +132,8 @@
                         <th>A1 SETUP Out of 100</th>
                         <th>A2 HTML Out of 100</th>
                         <th>A3 CSS Out of 100</th>
-                        <th>A4 BOOTSTRAP Out of 100</th>
-                        <th>A5 JAVASCRIPT Out of 100</th>
-                    </thead>
+                        <th>A4 Bootstrap Out of 100</th>
+                    </thead> 
                     <tbody>
                     <tr>
                         <td>Doxa Asibey</td>
@@ -197,7 +213,8 @@
                     </tr>
                     </tbody>
                  </table>
-                </div></td>
+                </div>
+            </td>
               </tr>
             </tbody>
           </table>
