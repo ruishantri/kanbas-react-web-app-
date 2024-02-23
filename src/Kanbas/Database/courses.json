@@ -1,6 +1,59 @@
-[ { "_id": "RS101", "name": "Rocket Propulsion", "number": "RS4550", "startDate": "2023-01-10",
-    "endDate": "2023-05-15", "image": "rocket-propulsion.png"  },
-  { "_id": "RS102", "name": "Aerodynamics", "number": "RS4560", "startDate": "2023-01-10",
-    "endDate": "2023-05-15", "image": "aerodynamics.png"  },
-  { "_id": "RS103", "name": "Spacecraft Design", "number": "RS4570", "startDate": "2023-01-10",
-    "endDate": "2023-05-15", "image": "spaceship-design.png"  } ]
+[
+    {
+      "_id": "CS1234",
+      "name": "CS1234 React JS",
+      "number": "Full Stack software developer",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "image": "react.webp"
+    },
+    {
+      "_id": "CS5001",
+      "name": "CS5001 Intensive Foundati...",
+      "number": "CS5001.32564.202330",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "image": "5001.jpeg"
+    },
+    {
+      "_id": "CS5002",
+      "name": "CS5002 Discrete Structures",
+      "number": "CS5002.36004.202330",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "image": "5002.png"
+    },
+    {
+      "_id": "CS5004",
+      "name": "CS5004 Object-Oriented Design",
+      "number": "CS5004.15372.202410",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "image": "50042.jpeg"
+    },
+    {
+      "_id": "CS5610",
+      "name": "CS5610 Web Development",
+      "number": "CS5610.35159.202430",
+      "startDate": "2023-01-10",
+      "endDate": "2023-05-15",
+      "image": "5610pic.png"
+    },
+    {
+      "_id": "F-1",
+      "name": "F-1 Orientation Boston",
+      "number": "F-1.Orientation.January.2024",
+      "startDate": "2024-01-01",
+      "endDate": "2024-01-15",
+      "image": "orien.png"
+    },
+    {
+      "_id": "Khoury",
+      "name": "Khoury College's Orientation",
+      "number": "Khoury.College.Orientation.Spring.2024",
+      "startDate": "2024-01-01",
+      "endDate": "2024-01-15",
+      "image": "kho.jpeg"
+    }
+  ]
+  

@@ -1,0 +1,13 @@
+.course-header {
+    color: firebrick; 
+    font-family: 'Georgia', sans-serif;
+    font-size: 1.2em;
+    display: flex; 
+    align-items: center; 
+    gap: 0.5em;
+  }
+  
+  .course-header .icon {
+    font-size: 1.5em; 
+  }
+  
