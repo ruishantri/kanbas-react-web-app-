@@ -8,6 +8,8 @@ function ModuleList() {
   const { courseId } = useParams();
   const modulesList = modules.filter((module) => module.course === courseId);
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
+  const [moduleList, setModuleList] = useState<any[]>(modules);
+
   return (
     <>
       <button type="button">Collapse All</button>
@@ -19,7 +21,8 @@ function ModuleList() {
     <button type="button">+ Module</button>
     <hr/>
       <ul className="list-group wd-modules">
-        {modulesList.map((module, index) => (
+        {modulesList .filter((module) => module.course === courseId)
+        .map((module, index) => (
           <li key={index}
             className="list-group-item"
             onClick={() => setSelectedModule(module)}>
