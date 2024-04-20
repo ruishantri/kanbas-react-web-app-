@@ -1,0 +1,13 @@
+[
+    { "_id": "A101", "name": "Homework 1", "course": "CS5110", "points": "50", "dueDate": "2024-01-28" },
+    { "_id": "A102", "name": "Homework 2", "course": "CS5110", "points": "50", "dueDate": "2024-02-11" },
+    { "_id": "A103", "name": "Homework 3", "course": "CS5110", "points": "50", "dueDate": "2024-02-25" },
+
+    { "_id": "A201", "name": "Week01 - base conversion & 2's complement", "course": "CS5002", "points": "100", "dueDate": "2024-01-28" },
+    { "_id": "A202", "name": "Week02 - boolean algebra", "course": "CS5002", "points": "100", "dueDate": "2024-02-16" },
+    { "_id": "A203", "name": "Week03 - implication, predicates, and quantifiers", "course": "CS5002", "points": "100", "dueDate": "2024-02-11" },
+
+    { "_id": "A301", "name": "Homework 1", "course": "CS5001", "points": "100", "dueDate": "2024-01-31" },
+    { "_id": "A302", "name": "Homework 2", "course": "CS5001", "points": "100", "dueDate": "2024-02-07" },
+    { "_id": "A303", "name": "Homework 3", "course": "CS5001", "points": "100", "dueDate": "2024-02-14" }
+  ]
