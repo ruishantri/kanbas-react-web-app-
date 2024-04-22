@@ -1,4 +1,5 @@
-import { courses } from "../../Kanbas/Database";
+import { useState, useEffect } from "react";
+import axios from "axios";import { courses } from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
@@ -6,9 +7,20 @@ import Modules from "./Modules";
 import "./index.css"; 
 
 
-function Courses({ courses }: { courses: any[]; }) {
+function Courses({ }: { courses: any[]; }) {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const COURSES_API = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState<any>({ _id: "" });
+  const findCourseById = async (courseId?: string) => {
+    const response = await axios.get(
+      `${COURSES_API}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   return (
     <div>
       <h1 className="course-header">
