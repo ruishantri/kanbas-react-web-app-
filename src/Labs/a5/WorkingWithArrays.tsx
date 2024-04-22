@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 const API_BASE = process.env.REACT_APP_API_BASE;
 
 function WorkingWithArrays() {
@@ -13,37 +12,30 @@ function WorkingWithArrays() {
     completed: false,
   });
   const [todos, setTodos] = useState<any[]>([]);
-
   const fetchTodos = async () => {
     const response = await axios.get(API);
     setTodos(response.data);
   };
-
   const removeTodo = async (todo: any) => {
     const response = await axios.get(`${API}/${todo.id}/delete`);
     setTodos(response.data);
   };
-
   const createTodo = async () => {
     const response = await axios.get(`${API}/create`);
     setTodos(response.data);
   };
-
   const fetchTodoById = async (id: any) => {
     const response = await axios.get(`${API}/${id}`);
     setTodo(response.data);
   };
-
   const updateTitle = async () => {
     const response = await axios.get(`${API}/${todo.id}/title/${todo.title}`);
     setTodos(response.data);
   };
-
   const postTodo = async () => {
     const response = await axios.post(API, todo);
     setTodos([...todos, response.data]);
   };
-
   const deleteTodo = async (todo: any) => {
     try {
       const response = await axios.delete(`${API}/${todo.id}`);
@@ -53,7 +45,6 @@ function WorkingWithArrays() {
       setErrorMessage(error.response.data.message);
     }
   };
-
   const updateTodo = async () => {
     try {
       const response = await axios.put(`${API}/${todo.id}`, todo);
@@ -64,12 +55,13 @@ function WorkingWithArrays() {
     }
   };
 
+
   useEffect(() => {
     fetchTodos();
   }, []);
 
+  
   const API = `${API_BASE}/a5/todos`;
-
   return (
     <div>
       <h3>Working with Arrays</h3>
@@ -89,7 +81,12 @@ function WorkingWithArrays() {
       <input
         type="text"
         value={todo.title}
-        onChange={(e) => setTodo({ ...todo, title: e.target.value })}
+        onChange={(e) =>
+          setTodo({
+            ...todo,
+            title: e.target.value,
+          })
+        }
       />
       <h3>Update Todo Description and Completion by ID</h3>
       ID <input value={todo.id} onChange={(e) => setTodo({ ...todo, id: parseInt(e.target.value) })} /> <br />
@@ -102,21 +99,36 @@ function WorkingWithArrays() {
       <input
         type="text"
         value={todo.title}
-        onChange={(e) => setTodo({ ...todo, title: e.target.value })}
+        onChange={(e) =>
+          setTodo({
+            ...todo,
+            title: e.target.value,
+          })
+        }
       />{" "}
       <br />
       <textarea value={todo.description} onChange={(e) => setTodo({ ...todo, description: e.target.value })} /> <br />
       <input
         value={todo.due}
         type="date"
-        onChange={(e) => setTodo({ ...todo, due: e.target.value })}
+        onChange={(e) =>
+          setTodo({
+            ...todo,
+            due: e.target.value,
+          })
+        }
       />{" "}
       <br />
       <label>
         <input
           checked={todo.completed}
           type="checkbox"
-          onChange={(e) => setTodo({ ...todo, completed: e.target.checked })}
+          onChange={(e) =>
+            setTodo({
+              ...todo,
+              completed: e.target.checked,
+            })
+          }
         />{" "}
         Completed
       </label>{" "}
@@ -144,5 +156,4 @@ function WorkingWithArrays() {
     </div>
   );
 }
-
 export default WorkingWithArrays;
