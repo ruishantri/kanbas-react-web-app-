@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API_BASE = process.env.REACT_APP_API_BASE;
 
-const ASSIGNMENTS_API = "https://kanbas-node-server-app.onrender.com/api/assignments";
+const ASSIGNMENTS_API = `${API_BASE}/api/assignments`;
 export const deleteAssignment = async (assignmentId: any) => {
   const response = await axios.delete(`${ASSIGNMENTS_API}/${assignmentId}`);
   return response.data;
