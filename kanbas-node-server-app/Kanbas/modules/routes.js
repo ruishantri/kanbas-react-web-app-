@@ -1,24 +1,30 @@
+import * as dao from "./dao.js";
 import db from "../Database/index.js";
+
 function ModuleRoutes(app) {
-  app.delete("/api/modules/:mid", (req, res) => {
+  app.delete("/api/modules/:mid", async (req, res) => {
     const { mid } = req.params;
-    db.modules = db.modules.filter((m) => m._id !== mid);
+    await dao.deleteModule(mid);
     res.sendStatus(200);
   });
-  app.post("/api/courses/:cid/modules", (req, res) => {
+  app.put("/api/modules/:mid", async (req, res) => {
+    const module = req.body;
+    await dao.deleteModule(mid);
+    res.sendStatus(204);
+  });
+  app.post("/api/courses/:cid/modules", async (req, res) => {
     const { cid } = req.params;
     const newModule = {
       ...req.body,
       course: cid,
       _id: new Date().getTime().toString(),
     };
-    db.modules.push(newModule);
+    await dao.createModule(newModule);
     res.send(newModule);
   });
-  app.get("/api/courses/:cid/modules", (req, res) => {
+  app.get("/api/courses/:cid/modules", async (req, res) => {
     const { cid } = req.params;
-    const modules = db.modules
-      .filter((m) => m.course === cid);
+    const modules = await dao.getModulesForCourse(cid);
     res.send(modules);
   });
 }
