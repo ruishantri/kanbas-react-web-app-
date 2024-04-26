@@ -1,21 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import axios from "axios";
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Route, Routes, useParams, useLocation} from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
 import Modules from "./Modules";
+import Breadcrumb from "./Breadcrumb";
 import "./index.css"; 
+import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments/Editor";
 
 const API_BASE = process.env.REACT_APP_API_BASE;
 
-function Courses({ }: { courses: any[]; }) {
+function Courses(/*{ courses }: { courses: any[] }*/) {
+  console.log(useLocation());
+
   const { courseId } = useParams();
-  const COURSES_API =  `${API_BASE}/api/courses`;
+  const COURSES_API = "http://localhost:4000/api/courses";
   const [course, setCourse] = useState<any>({ _id: "" });
   const findCourseById = async (courseId?: string) => {
-    const response = await axios.get(
-      `${COURSES_API}/${courseId}`
-    );
+    const response = await axios.get(`${COURSES_API}/${courseId}`);
     setCourse(response.data);
   };
   useEffect(() => {
@@ -23,27 +26,21 @@ function Courses({ }: { courses: any[]; }) {
   }, [courseId]);
 
   return (
-    <div>
-      <h1 className="course-header">
-        <HiMiniBars3 className="icon"/> Course {course?.name}</h1>
-      <CourseNavigation />
-      <div>
-        <div
-          className="overflow-y-scroll position-fixed bottom-0 end-0"
-          style={{ left: "320px", top: "50px" }} >
+    <>
+      <div className="d-flex flex-column">
+        <Breadcrumb course={course} />
+        <div className="d-flex" style={{ gap: "20px" }}>
+          <CourseNavigation />
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
-            <Route path="Home" element={<h1>Home</h1>} />
-            <Route path="Modules" element={<Modules/>} />
+            <Route path="Modules" element={<Modules />} />
             <Route path="Piazza" element={<h1>Piazza</h1>} />
-            <Route path="Assignments" element={<h1>Assignments</h1>} />
-            <Route path="Assignments/:assignmentId" element={<h1>Assignment Editor</h1>} />
-            <Route path="Grades" element={<h1>Grades</h1>} />
+            <Route path="Assignments" element={<Assignments />} />
+            <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
           </Routes>
         </div>
       </div>
-    </div>
+    </>
   );
 }
-
 export default Courses;

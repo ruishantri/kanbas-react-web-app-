@@ -1,0 +1,24 @@
+.wd-course-status * {
+    font-size: small;
+    text-align: start;
+  }
+  
+  .wd-course-status ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  
+  .wd-course-status-upcoming ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .wd-course-status-upcoming a {
+    color: red;
+    text-decoration: none;
+  }
