@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import store from "./store";
 import { Provider } from "react-redux";
+import Account from "./Account";
 
 const API_BASE = process.env.REACT_APP_API_BASE;
 
@@ -56,6 +57,7 @@ function Kanbas() {
           <KanbasNavigation />
           <div className="flex-fill">
             <Routes>
+            <Route path="/Account/*" element={<Account />} />
               <Route path="/" element={<Navigate to="Dashboard" />} />
               <Route path="Account" element={<h2>Account</h2>} />
               <Route
