@@ -49,8 +49,52 @@ const Lab5 = (app) => {
     res.json(todos);
   });
 
+  app.put("/a5/todos/:id", (req, res) => {
+    const { id } = req.params;
+    const todo = todos.find((t) => t.id === parseInt(id));
+    if (!todo) {
+      res.status(404)
+        .json({ message: `Unable to update Todo with ID ${id}` });
+      return;
+    }
+    todo.title = req.body.title;
+    todo.description = req.body.description;
+    todo.due = req.body.due;
+    todo.completed = req.body.completed;
+    res.sendStatus(200);
+  });
+
+  app.get('/a5/todos/:id/completed/:completed', (req, res) => {
+    const { id, completed } = req.params;
+    const todo = todos.find(t => t.id === parseInt(id));
+    if (todo) {
+        todo.completed = completed === 'true';
+    }
+    res.json(todos);
+});
+
+app.get('/a5/todos/:id/description/:description', (req, res) => {
+    const { id, description } = req.params;
+    const todo = todos.find(t => t.id === parseInt(id));
+    if (todo) {
+        todo.description = description;
+    }
+    res.json(todos);
+});
+
+app.get("/a5/todos/:id/delete", (req, res) => {
+  const { id } = req.params;
+  const todo = todos.find((t) => t.id === parseInt(id));
+  todos.splice(todos.indexOf(todo), 1);
+  res.json(todos);
+});
+
   app.get("/a5/assignment", (req, res) => {
     res.json(assignment);
+  });
+
+  app.get("/a5/assignment/title", (req, res) => {
+    res.json(assignment.title);
   });
 
   app.get("/a5/welcome", (req, res) => {
@@ -93,63 +137,30 @@ const Lab5 = (app) => {
     assignment.title = newTitle;
     res.json(assignment);
   });
-
-    app.get('/a5/todos/:id/completed/:completed', (req, res) => {
-      const { id, completed } = req.params;
-      const todo = todos.find(t => t.id === parseInt(id));
-      if (todo) {
-          todo.completed = completed === 'true';
-      }
-      res.json(todos);
-  });
   
-  app.get('/a5/todos/:id/description/:description', (req, res) => {
-      const { id, description } = req.params;
-      const todo = todos.find(t => t.id === parseInt(id));
-      if (todo) {
-          todo.description = description;
-      }
-      res.json(todos);
-  });
-
-  app.delete("/a5/todos/:id", (req, res) => {
-    const { id } = req.params;
-    const todo = todos.find((t) => t.id === parseInt(id));
-    if (!todo) {
-      res.status(404)
-        .json({ message: `Unable to delete Todo with ID ${id}` });
-      return;
-    }
-    todos.splice(todos.indexOf(todo), 1);
-    res.sendStatus(200);
-  });
-  app.get("/a5/todos/:id/delete", (req, res) => {
-    const { id } = req.params;
-    const todo = todos.find((t) => t.id === parseInt(id));
-    todos.splice(todos.indexOf(todo), 1);
-    res.json(todos);
-  });
-
-  app.put("/a5/todos/:id", (req, res) => {
-    const { id } = req.params;
-    const todo = todos.find((t) => t.id === parseInt(id));
-    if (!todo) {
-      res.status(404)
-        .json({ message: `Unable to update Todo with ID ${id}` });
-      return;
-    }
-    todo.title = req.body.title;
-    todo.description = req.body.description;
-    todo.due = req.body.due;
-    todo.completed = req.body.completed;
-    res.sendStatus(200);
-  });
-
   app.get("/a5/assignment/score/:newScore", (req, res) => {
     const { newScore } = req.params;
     assignment.score = newScore;
     res.json(assignment);
   });
+
+  app.get("/a5/module", (req, res) => {
+    res.json(module);
+  });
+  app.get("/a5/module/name", (req, res) => {
+    res.json(module.name);
+  });
+  app.get("/a5/module/name/:newName", (req, res) => {
+    const { newName } = req.params;
+    module.name = newName;
+    res.json(module);
+  });
+  app.get("/a5/module/description/:newDescription", (req, res) => {
+    const { newDescription } = req.params;
+    module.description = newDescription;
+    res.json(module);
+  });
+
   
   };
   export default Lab5;
