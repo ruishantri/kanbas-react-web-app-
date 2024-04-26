@@ -9,6 +9,13 @@ const assignment = {
   score: 0,
 };
 
+const module = {
+  id: "123",
+  name: "Create Module",
+  description: "NodeJS",
+  course: "CS1234",
+};
+
 const todos = [
   { id: 1, title: "Task 1", completed: false },
   { id: 2, title: "Task 2", completed: true },
@@ -81,6 +88,12 @@ const Lab5 = (app) => {
   app.get("/a5/assignment/title", (req, res) => {
     res.json(assignment.title);
   });
+  app.get("/a5/assignment/title/:newTitle", (req, res) => {
+    const { newTitle } = req.params;
+    assignment.title = newTitle;
+    res.json(assignment);
+  });
+
     app.get('/a5/todos/:id/completed/:completed', (req, res) => {
       const { id, completed } = req.params;
       const todo = todos.find(t => t.id === parseInt(id));
@@ -132,6 +145,11 @@ const Lab5 = (app) => {
     res.sendStatus(200);
   });
 
+  app.get("/a5/assignment/score/:newScore", (req, res) => {
+    const { newScore } = req.params;
+    assignment.score = newScore;
+    res.json(assignment);
+  });
   
   };
   export default Lab5;
