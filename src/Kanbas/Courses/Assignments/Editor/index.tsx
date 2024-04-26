@@ -12,11 +12,10 @@ function AssignmentEditor() {
   const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
 
-  //const assignment = assignments.find((assignment) => assignment._id === assignmentId);
+  
   const navigate = useNavigate();
 
   const handleSave = () => {
-    // Add assignment if new, update if exists
     if (pathname.includes("*")) {
       dispatch(addAssignment({ ...assignment, course: courseId }));
     } else {
